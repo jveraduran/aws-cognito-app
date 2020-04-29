@@ -1,0 +1,17 @@
+pipeline:
+
+  build-image-for-develop:
+    image: plugins/ecr
+    repo: aws-cognito-web
+    registry: 304808560109.dkr.ecr.us-east-1.amazonaws.com/cl-bigbang-labs
+    tags:
+      - develop
+    secrets: 
+      - source: aws_access_key_id
+        target: AWS_ACCESS_KEY_ID
+      - source: aws_secret_access_key
+        target: AWS_SECRET_ACCESS_KEY
+      - source: aws_security_token
+        target: AWS_SECURITY_TOKEN
+    when:
+      branch: [develop]
