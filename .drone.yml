@@ -3,7 +3,7 @@ pipeline:
   build-image-for-develop:
     image: plugins/ecr
     repo: aws-cognito-web
-    registry: 304808560109.dkr.ecr.us-east-1.amazonaws.com/cl-bigbang-labs
+    registry: 
     tags:
       - develop
     secrets: 
